@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>StepForm - Premium Shoe, Cap & Bag Care Surabaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-deep-navy: #090d16;
+            --bg-card-navy: #111827;
+            --primary-blue: #2563eb;
+            --primary-blue-glow: rgba(37, 99, 235, 0.4);
+            --cyan-accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-navy: rgba(255, 255, 255, 0.1);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            --wa-green: #10b981;
+            --glass-bg: rgba(17, 24, 39, 0.75);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --transition: all 0.35s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-deep-navy);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, .font-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* 1. TOP MARQUEE BAR */
+        .top-marquee-bar {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border-navy);
+            position: relative;
+            z-index: 1001;
+            display: flex;
+        }
+
+        .marquee-track {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            will-change: transform;
+            animation: marquee 28s linear infinite;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 24px;
+            padding-right: 40px;
+        }
+
+        .marquee-badge {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--cyan-accent);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .marquee-divider {
+            color: var(--cyan-accent);
+            font-weight: bold;
+            opacity: 0.5;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* 2. NAVBAR */
+        header {
+            background: rgba(9, 13, 22, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-navy);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            position: relative;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .brand-logo-svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .brand-text h1 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .brand-text p {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--cyan-accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--cyan-accent);
+        }
+
+        .btn-wa-nav {
+            background: #10b981;
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 700 !important;
+            transition: var(--transition) !important;
+        }
+
+        .btn-wa-nav:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* 3. HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 88vh;
+            padding: 100px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            opacity: 0.35;
+            z-index: 1;
+        }
+
+        .hero-mesh-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 50% 40%, rgba(37, 99, 235, 0.4) 0%, transparent 70%),
+                linear-gradient(to bottom, rgba(9, 13, 22, 0.7) 0%, var(--bg-deep-navy) 100%);
+            z-index: 2;
+        }
+
+        .hero-container-center {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-content-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(37, 99, 235, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--cyan-accent);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 16px;
+            letter-spacing: -1.5px;
+            color: #ffffff;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .promo-card-center {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            padding: 20px 28px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin: 0 auto 40px auto;
+            max-width: 580px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .promo-price-tag {
+            background: #ef4444;
+            color: white;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            min-width: 125px;
+        }
+
+        .promo-price-tag span {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .promo-price-tag strong {
+            font-size: 1.8rem;
+            font-weight: 900;
+            line-height: 1;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .promo-details h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .promo-details p {
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+
+        .hero-actions-center {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-hero {
+            background: var(--primary-blue);
+            color: white;
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary-hero:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary-hero {
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid var(--border-navy);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .btn-secondary-hero:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* 4. SECTION OUR TEAM */
+        .team-section {
+            background: rgba(15, 23, 42, 0.6);
+            border-top: 1px solid var(--border-navy);
+            border-bottom: 1px solid var(--border-navy);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .team-card {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            text-align: center;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-hover);
+            box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15);
+        }
+
+        .team-img-wrapper {
+            width: 100%;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            position: relative;
+            background: #0f172a;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: var(--transition);
+            filter: contrast(1.05) brightness(1.02);
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 18px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .team-name {
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .team-role {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--cyan-accent);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* 5. SECTIONS COMMON & TENTANG KAMI */
+        .section-padding {
+            padding: 90px 24px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .about-top-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .about-text-left h3 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
+
+        .about-desc-text {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .visi-misi-box {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .vm-item h4 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--cyan-accent);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vm-item p {
+            color: #cbd5e1;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .vm-item ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 4px;
+        }
+
+        .vm-item ul li {
+            color: #cbd5e1;
+            font-size: 0.92rem;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+        }
+
+        .vm-item ul li::before {
+            content: "•";
+            color: var(--cyan-accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .about-video-right {
+            text-align: center;
+        }
+
+        .about-video-right h4 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .about-video-right p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 0.85rem;
+        }
+
+        .video-container-wrapper {
+            max-width: 360px;
+            margin: 0 auto;
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            transition: var(--transition);
+        }
+
+        .video-container-wrapper:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+
+        .video-element {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+        }
+
+        .about-features-bottom {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature-box {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-hover);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+        }
+
+        .feature-content {
+            padding: 18px;
+        }
+
+        .feature-box h4 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        .feature-box p {
+            color: var(--text-muted);
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        /* 6. PRICE LIST */
+        .pricelist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .price-card {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .price-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .price-card-image-header {
+            height: 140px;
+            width: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .price-card-image-header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.2) 0%, var(--bg-card-navy) 100%);
+        }
+
+        .price-card-title-overlay {
+            position: absolute;
+            bottom: 12px;
+            left: 24px;
+            z-index: 2;
+        }
+
+        .price-card-title-overlay h4 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .price-card-image-split {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .price-card-image-split img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .price-card-image-split img:first-child {
+            border-right: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .price-card-body {
+            padding: 24px 28px 32px 28px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-price {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--cyan-accent);
+            font-family: 'Outfit', sans-serif;
+            white-space: nowrap;
+        }
+
+        .badge-save {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        .promo-banner-clean {
+            margin-top: 24px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(56, 189, 248, 0.05) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+
+        .banner-tag {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--cyan-accent);
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .banner-sub {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        /* 7. HASIL BEFORE AFTER */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .comparison-card {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .comparison-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            background: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .result-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .comparison-info {
+            padding: 20px 24px;
+        }
+
+        .comparison-info h4 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 2px;
+        }
+
+        .comparison-info span {
+            color: var(--cyan-accent);
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        /* 8. ARTICLES / BLOG GRID STYLES */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .article-card {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-hover);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .article-date {
+            color: var(--cyan-accent);
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .article-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-read-article {
+            background: transparent;
+            color: var(--cyan-accent);
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+
+        .btn-read-article:hover {
+            color: white;
+            gap: 10px;
+        }
+
+        /* 9. FAQ ACCORDION STYLES */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--border-hover);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--cyan-accent);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--cyan-accent);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out, padding 0.35s ease-out;
+            background: rgba(15, 23, 42, 0.4);
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px 24px;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* 10. BOOKING, CONTACT & MAPS */
+        .booking-box {
+            background: var(--bg-card-navy);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .booking-form {
+            padding: 44px;
+        }
+
+        .booking-form h4 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 6px;
+        }
+
+        .booking-form p {
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 13px 16px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-navy);
+            border-radius: var(--radius-md);
+            color: white;
+            font-size: 0.92rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--cyan-accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group option {
+            background: var(--bg-card-navy);
+            color: white;
+        }
+
+        .booking-info {
+            background: rgba(15, 23, 42, 0.95);
+            padding: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 1px solid var(--border-navy);
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h5 {
+            font-size: 0.95rem;
+            color: var(--cyan-accent);
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .info-item p, .info-item a {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .map-container {
+            margin-top: 15px;
+            width: 100%;
+            height: 200px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-navy);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* 11. FOOTER */
+        footer {
+            background: #050811;
+            padding: 50px 24px 24px;
+            border-top: 1px solid var(--border-navy);
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-navy);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* MEDIA QUERIES RESPONSIVE */
+        @media (max-width: 1024px) {
+            .team-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-top-grid {
+                grid-template-columns: 1fr;
+            }
+            .about-features-bottom {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .booking-box {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(9, 13, 22, 0.95);
+                backdrop-filter: blur(16px);
+                padding: 20px 24px;
+                border-bottom: 1px solid var(--border-navy);
+                gap: 16px;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-features-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-form, .booking-info {
+                padding: 28px 20px;
+            }
+
+            .promo-card-center {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP MARQUEE BAR -->
+    <div class="top-marquee-bar">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <span><strong class="marquee-badge">PROMO SPESIAL</strong> Cuci Sepatu 3 Pasang Hanya Rp 100K (Hemat 20K)</span>
+                <span class="marquee-divider">•</span>
+                <span><strong class="marquee-badge">FREE PICKUP</strong> Minimal 3 Pasang Sepatu Wilayah Surabaya</span>
+                <span class="marquee-divider">•</span>
+                <span><strong class="marquee-badge">OUTLET</strong> Jl. Ahmad Yani No.88, Ketintang, Surabaya</span>
+                <span class="marquee-divider">•</span>
+                <span><strong class="marquee-badge">JAM OPERASIONAL</strong> Senin - Sabtu (09:00 - 17:00 WIB)</span>
+                <span class="marquee-divider">•</span>
+            </div>
+            <div class="marquee-item">
+                <span><strong class="marquee-badge">PROMO SPESIAL</strong> Cuci Sepatu 3 Pasang Hanya Rp 100K (Hemat 20K)</span>
+                <span class="marquee-divider">•</span>
+                <span><strong class="marquee-badge">FREE PICKUP</strong> Minimal 3 Pasang Sepatu Wilayah Surabaya</span>
+                <span class="marquee-divider">•</span>
+                <span><strong class="marquee-badge">OUTLET</strong> Jl. Ahmad Yani No.88, Ketintang, Surabaya</span>
+                <span class="marquee-divider">•</span>
+                <span><strong class="marquee-badge">JAM OPERASIONAL</strong> Senin - Sabtu (09:00 - 17:00 WIB)</span>
+                <span class="marquee-divider">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 25,25 L 75,25 C 82,25 82,42 70,45 L 30,55 C 18,58 18,75 30,75 L 75,75" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+                    <path d="M 28,78 Q 50,88 78,78" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+                <div class="brand-text">
+                    <h1>StepForm</h1>
+                    <p>Clean Your Step</p>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#layanan">Layanan & Price List</a></li>
+                <li><a href="#hasil">Hasil Perawatan</a></li>
+                <li><a href="#artikel">Blog & Tips</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontak">Kontak & Lokasi</a></li>
+                <li><a href="#team">Tim Kami</a></li>
+                <li>
+                    <a href="https://wa.me/6285196900094?text=Halo%20Admin%20StepForm,%20saya%20ingin%20konsultasi%20cuci%20sepatu" target="_blank" class="btn-wa-nav">
+                        Pesan via WA
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- SLIDE 1: HERO SECTION -->
+    <section class="hero" id="beranda">
+        <div class="hero-bg"></div>
+        <div class="hero-mesh-overlay"></div>
+
+        <div class="hero-container-center">
+            <div class="hero-content-center">
+                <div class="hero-badge">
+                    <span>CARE • CLEAN • ELEVATE</span>
+                </div>
+                <h2 class="hero-title">CLEAN SHOES.<br>BETTER STEPS.</h2>
+                
+                <p class="hero-subtitle">Sepatu Kusam & Bau Bikin Gak Pede? Bikin Clean & Fresh Seperti Baru Kembali!</p>
+
+                <div class="promo-card-center">
+                    <div class="promo-price-tag">
+                        <span>3 PASANG</span>
+                        <strong>100K</strong>
+                    </div>
+                    <div class="promo-details">
+                        <h4>Promo Deep Clean Hemat</h4>
+                        <p>Dapatkan cuci 3 pasang sepatu hanya 100K + <strong>FREE Pick Up Surabaya</strong> (Min. 3 pasang).</p>
+                    </div>
+                </div>
+
+                <div class="hero-actions-center">
+                    <a href="#order" class="btn-primary-hero">
+                        Order Antar-Jemput
+                    </a>
+                    <a href="#layanan" class="btn-secondary-hero">
+                        Lihat Pricelist Resmi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG KAMI -->
+    <section class="section-padding" id="tentang">
+        <div class="container">
+            
+            <!-- LAYOUT ATAS: TEKS & VISI MISI (KIRI) vs VIDEO (KANAN) -->
+            <div class="about-top-grid">
+                
+                <!-- KIRI: DESKRIPSI DAN VISI MISI -->
+                <div class="about-text-left">
+                    <h3>Tentang StepForm</h3>
+                    <p class="about-desc-text">
+                        StepForm adalah penyedia jasa perawatan profesional untuk sepatu, topi, dan tas terpercaya di Surabaya. Didirikan sejak 23 Desember 2025, StepForm lahir dari komitmen untuk memberikan perawatan terbaik bagi setiap alas kaki dan aksesori kesayangan Anda. Kami berkomitmen memberikan standar pembersihan premium dengan perlakuan khusus pada tiap material agar koleksi kesayangan Anda tetap awet dan terlihat seperti baru.
+                    </p>
+
+                    <!-- BOX VISI & MISI -->
+                    <div class="visi-misi-box">
+                        <div class="vm-item">
+                            <h4>🎯 Visi Kami</h4>
+                            <p>Menjadi penyedia jasa perawatan sepatu, topi, dan tas profesional pilihan utama di Surabaya yang terpercaya, berstandar premium, dan mengutamakan kepuasan serta kenyamanan pelanggan.</p>
+                        </div>
+                        <div class="vm-item">
+                            <h4>🚀 Misi Kami</h4>
+                            <ul>
+                                <li>Memberikan perawatan terbaik dengan teknik khusus dan bahan pembersih yang aman untuk setiap jenis material.</li>
+                                <li>Memberikan kemudahan layanan kepada pelanggan melalui fasilitas gratis antar-jemput di wilayah Surabaya.</li>
+                                <li>Menjaga kualitas pengerjaan yang konsisten serta memberikan garansi kepuasan di setiap layanan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KANAN: VIDEO -->
+                <div class="about-video-right">
+                    <h4>Video Pengerjaan & Suasana Outlet</h4>
+                    <p>Proses pencucian profesional di outlet StepForm Ketintang, Surabaya.</p>
+                    <div class="video-container-wrapper">
+                        <video class="video-element" controls autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80">
+                            <source src="./WhatsApp Video 2026-09-27 at 19.04.06.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutar video.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LAYOUT BAWAH: 4 POIN KEUNGGULAN -->
+            <div class="about-features-bottom">
+                <div class="feature-box">
+                    <img class="feature-img" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="Formulasi Premium">
+                    <div class="feature-content">
+                        <h4>Formulasi Premium & Safe</h4>
+                        <p>Pembersih khusus aman untuk material Suede, Canvas, Leather, Nubuck, & Knit tanpa merusak warna.</p>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <img class="feature-img" src="https://images.unsplash.com/photo-1587476351660-e9fa4bb8b26c?auto=format&fit=crop&w=600&q=80" alt="Free Pick Up Surabaya">
+                    <div class="feature-content">
+                        <h4>Free Pick Up Surabaya</h4>
+                        <p>Layanan jemput dan antar gratis langsung ke lokasi Anda di wilayah Surabaya (Min. 3 pasang).</p>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <img class="feature-img" src="https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80" alt="Garansi Cuci Ulang">
+                    <div class="feature-content">
+                        <h4>Garansi Cuci Ulang</h4>
+                        <p>Jaminan pengerjaan kembali secara gratis jika hasil perawatan belum sesuai standar kesepakatan.</p>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <img class="feature-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Layanan Express 24 Jam">
+                    <div class="feature-content">
+                        <h4>Layanan Express 24 Jam</h4>
+                        <p>Butuh sepatu bersih siap pakai besok? Gunakan pilihan pengerjaan kilat 24 jam selesai kami.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRICE LIST -->
+    <section class="section-padding" id="layanan">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 40px; text-align: center;">
+                <h3>Price List & Katalog</h3>
+                <p>Layanan perawatan profesional untuk sepatu, topi, dan tas Anda.</p>
+            </div>
+
+            <div class="pricelist-grid">
+
+                <div class="price-card">
+                    <div class="price-card-image-header" style="background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80');">
+                        <div class="price-card-title-overlay">
+                            <h4>SHOES CARE</h4>
+                        </div>
+                    </div>
+
+                    <div class="price-card-body">
+                        <div class="menu-item">
+                            <span class="menu-title">Cuci Sepatu (1 Pasang)</span>
+                            <span class="menu-price">Rp 40.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-title">
+                                Deep Clean (3 Pasang)
+                                <span class="badge-save">PROMO</span>
+                            </div>
+                            <span class="menu-price">Rp 100.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Whitening</span>
+                            <span class="menu-price">Mulai Rp 75.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Repaint Shoes</span>
+                            <span class="menu-price">Mulai Rp 100.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Unyellowing Sole</span>
+                            <span class="menu-price">Mulai Rp 100.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Reglue Sole</span>
+                            <span class="menu-price">Mulai Rp 100.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-card-image-header">
+                        <div class="price-card-image-split">
+                            <img src="https://images.unsplash.com/photo-1645266729222-17cd32e06fd0?auto=format&fit=crop&w=400&q=80" alt="Topi / cap">
+                            <img src="https://images.unsplash.com/photo-1614096602561-7394f4d5dc82?auto=format&fit=crop&w=400&q=80" alt="Tas / bag">
+                        </div>
+                        <div class="price-card-title-overlay">
+                            <h4>CAP & BAG CARE</h4>
+                        </div>
+                    </div>
+
+                    <div class="price-card-body">
+                        <div class="menu-item">
+                            <span class="menu-title">Cuci Topi</span>
+                            <span class="menu-price">Rp 45.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Repaint Topi</span>
+                            <span class="menu-price">Mulai Rp 75.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Small Bag</span>
+                            <span class="menu-price">Rp 65.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Medium Bag</span>
+                            <span class="menu-price">Rp 85.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Large Bag</span>
+                            <span class="menu-price">Rp 110.000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-card">
+                    <div class="price-card-image-header" style="background-image: url('https://images.unsplash.com/photo-1556906781-9a412961c28c?auto=format&fit=crop&w=600&q=80');">
+                        <div class="price-card-title-overlay">
+                            <h4>ADD-ON SERVICES</h4>
+                        </div>
+                    </div>
+
+                    <div class="price-card-body">
+                        <div class="menu-item">
+                            <span class="menu-title">Express 24 Jam</span>
+                            <span class="menu-price">+ Rp 30.000</span>
+                        </div>
+
+                        <div class="menu-item">
+                            <span class="menu-title">Pickup & Delivery Surabaya</span>
+                            <span class="menu-price">Mulai Rp 15.000</span>
+                        </div>
+
+                        <div class="promo-banner-clean">
+                            <p class="banner-tag">FREE PICKUP SURABAYA</p>
+                            <p class="banner-sub">Khusus pencucian minimal 3 pasang sepatu.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HASIL PERAWATAN -->
+    <section class="section-padding" id="hasil" style="background: rgba(17, 24, 39, 0.4);">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <h3>Hasil Transformasi Perawatan</h3>
+                <p>Dokumentasi pengerjaan pembersihan kotoran membandel oleh tim profesional StepForm.</p>
+            </div>
+
+            <div class="comparison-grid">
+
+                <div class="comparison-card">
+                    <div class="image-wrapper">
+                        <img src="./1.png" alt="Before After Whitening Sepatu" class="result-img" loading="lazy">
+                    </div>
+                    <div class="comparison-info">
+                        <h4>Whitening</h4>
+                        <span>Whitening Sepatu</span>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="image-wrapper">
+                        <img src="./2.png" alt="Before After Multi-Material Sneakers" class="result-img" loading="lazy">
+                    </div>
+                    <div class="comparison-info">
+                        <h4>Multi-Material Sneakers</h4>
+                        <span>Cuci Sepatu (1 Pasang)</span>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="image-wrapper">
+                        <img src="./3.png" alt="Before After Canvas Slip-On Checkerboard" class="result-img" loading="lazy">
+                    </div>
+                    <div class="comparison-info">
+                        <h4>Canvas Slip-On Checkerboard</h4>
+                        <span>Cuci Sepatu (1 Pasang)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ARTIKEL / BLOG & TIPS -->
+    <section class="section-padding" id="artikel">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <h3>BLOG & TIPS PERAWATAN</h3>
+                <p>Informasi dan panduan praktis dari teknisi ahli StepForm untuk merawat koleksi sepatu, topi, dan tas favorit Anda.</p>
+            </div>
+
+            <div class="articles-grid">
+                
+                <!-- Artikel 1 -->
+                <article class="article-card">
+                    <img class="article-img" src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" alt="Mencegah Sepatu Kulit Jamuran">
+                    <div class="article-body">
+                        <span class="article-date">PADA 15 OKTOBER 2026</span>
+                        <h4 class="article-title">Mencegah Sepatu Kulit Agar Tidak Jamuran</h4>
+                        <p class="article-excerpt">Sepatu kulit sangat rentan berjamur jika disimpan di tempat lembap. Pelajari trik penyimpanan dan penggunaan mink oil secara tepat.</p>
+                        <a href="blog/mencegah-sepatu-kulit-jamuran.html" target="_blank" class="btn-read-article">BACA SELENGKAPNYA &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 2 -->
+                <article class="article-card">
+                    <img class="article-img" src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80" alt="Ciri Sepatu Lari Tidak Layak">
+                    <div class="article-body">
+                        <span class="article-date">PADA 02 OKTOBER 2026</span>
+                        <h4 class="article-title">Ciri-Ciri Sepatu Lari Kamu Sudah Mulai Tidak Layak Pakai!</h4>
+                        <p class="article-excerpt">Cushion keras, outsole aus, dan timbul nyeri di tumit? Kenali 5 tanda utama kapan sepatu lari Anda wajib diganti demi keamanan kaki.</p>
+                        <a href="blog/ciri-sepatu-lari-rusak.html" target="_blank" class="btn-read-article">BACA SELENGKAPNYA &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 3 -->
+                <article class="article-card">
+                    <img class="article-img" src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=600&q=80" alt="Dampak Cuci Mesin Cuci">
+                    <div class="article-body">
+                        <span class="article-date">PADA 20 SEPTEMBER 2026</span>
+                        <h4 class="article-title">5 Alasan Utama Mengapa Tidak Disarankan Mencuci Sepatu dengan Mesin Cuci</h4>
+                        <p class="article-excerpt">Sering memasukkan sepatu ke dalam mesin cuci? Perputaran drum berlebih bisa merusak struktur lem dan sol sepatu secara permanen.</p>
+                        <a href="blog/bahaya-cuci-sepatu-mesin-cuci.html" target="_blank" class="btn-read-article">BACA SELENGKAPNYA &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 4 -->
+                <article class="article-card">
+                    <img class="article-img" src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80" alt="Penyebab Sol Menguning">
+                    <div class="article-body">
+                        <span class="article-date">PADA 10 SEPTEMBER 2026</span>
+                        <h4 class="article-title">Mengapa Sol Sepatu Putih Berubah Menguning (Unyellowing)?</h4>
+                        <p class="article-excerpt">Oksidasi bahan karet akibat paparan Sinar UV dan kelembapan ruangan adalah penyebab utamanya. Ketahui langkah unyellowing yang aman.</p>
+                        <a href="blog/penyebab-sol-sepatu-menguning.html" target="_blank" class="btn-read-article">BACA SELENGKAPNYA &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 5 -->
+                <article class="article-card">
+                    <img class="article-img" src="./suede_2.jpg" alt="Merawat Sepatu Suede">
+                    <div class="article-body">
+                        <span class="article-date">PADA 01 SEPTEMBER 2026</span>
+                        <h4 class="article-title">Panduan Merawat Sepatu Bahan Suede Agar Tekstur Tetap Halus</h4>
+                        <p class="article-excerpt">Suede tidak boleh disikat dengan air secara asal-asalan. Gunakan sikat berbulu kuningan khusus dan spons penghapus suede.</p>
+                        <a href="blog/panduan-merawat-sepatu-suede.html" target="_blank" class="btn-read-article">BACA SELENGKAPNYA &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Artikel 6 -->
+                <article class="article-card">
+                    <img class="article-img" src="https://images.unsplash.com/photo-1645266729222-17cd32e06fd0?auto=format&fit=crop&w=600&q=80" alt="Perawatan Topi dan Tas">
+                    <div class="article-body">
+                        <span class="article-date">PADA 18 AGUSTUS 2026</span>
+                        <h4 class="article-title">Tips Menyimpan Topi & Tas Kesayangan Agar Tidak Berjamur & Bau</h4>
+                        <p class="article-excerpt">Hindari menumpuk topi keras (snapback/cap) agar bentuk crown tidak penyok. Gunakan silica gel saat menyimpan tas berbahan canvas/leather.</p>
+                        <a href="blog/tips-menyimpan-topi-dan-tas.html" target="_blank" class="btn-read-article">BACA SELENGKAPNYA &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section class="section-padding" id="faq" style="background: rgba(17, 24, 39, 0.4); border-top: 1px solid var(--border-navy);">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <h3>Pertanyaan Sering Diajukan (FAQ)</h3>
+                <p>Temukan jawaban cepat untuk pertanyaan umum mengenai layanan perawatan StepForm Surabaya.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Berapa lama proses pengerjaan cuci sepatu di StepForm?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Pengerjaan reguler memakan waktu sekitar 2–3 hari kerja tergantung pada tingkat kekotoran dan kondisi cuaca. Jika Anda butuh cepat, tersedia layanan <strong>Express 24 Jam</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Bagaimana ketentuan Free Pick Up & Delivery?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Layanan Gratis Antar-Jemput berlaku untuk wilayah Surabaya dengan minimum pemesanan <strong>3 pasang sepatu</strong> (atau paket Deep Clean Promo 100K).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Apakah bahan cairan pembersih aman untuk sepatu mahal / branded?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sangat aman. Kami menggunakan pembersih berformula khusus teruji yang tidak merusak serat kain, tidak membuat kulit mengelupas, dan menjaga keaslian warna material seperti Suede, Canvas, Nubuck, hingga Genuine Leather.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Apakah ada garansi jika hasil cuci kurang bersih?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, kami memberikan <strong>Garansi Cuci Ulang GRATIS</strong> jika hasil perawatan yang diterima belum memenuhi standar kesepakatan awal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Apakah StepForm menerima perbaikan sol lepas atau warna pudar?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tentu! Kami menyediakan layanan <strong>Reglue Sole</strong> (lem ulang sol) serta <strong>Repaint Shoes & Cap</strong> untuk mengembalikan warna asli sepatu atau topi kesayangan Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM ORDER & KONTAK -->
+    <section class="section-padding" id="order">
+        <div class="container">
+            <div class="booking-box">
+
+                <div class="booking-form">
+                    <h4>Form Antar-Jemput</h4>
+                    <p>Isi formulir berikut untuk melakukan pemesanan. Rincian order akan otomatis terhubung ke WhatsApp Admin.</p>
+
+                    <form id="waBookingForm">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" placeholder="Contoh: Rian Anggara" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="waNum">No. WhatsApp / HP</label>
+                                <input type="tel" id="waNum" placeholder="Contoh: 08123456789" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="nama@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="layanan">Pilih Layanan Utama</label>
+                                <select id="layanan" required>
+                                    <option value="Promo Deep Clean 3 Pasang (100K)">Promo Deep Clean 3 Pasang (100K)</option>
+                                    <option value="Cuci Sepatu 1 Pasang (40K)">Cuci Sepatu 1 Pasang (Rp 40.000)</option>
+                                    <option value="Whitening Sepatu (75K)">Whitening Sepatu (Mulai Rp 75.000)</option>
+                                    <option value="Repaint Sepatu (100K)">Repaint Sepatu (Mulai Rp 100.000)</option>
+                                    <option value="Unyellowing Sole (100K)">Unyellowing Sole (Mulai Rp 100.000)</option>
+                                    <option value="Reglue Sole (100K)">Reglue Sole (Mulai Rp 100.000)</option>
+                                    <option value="Cap Care (Topi)">Cuci / Repaint Topi</option>
+                                    <option value="Bag Care (Tas)">Bag Care (Pouch / Backpack / Carrier)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="jumlah">Jumlah Unit / Pasang</label>
+                                <input type="number" id="jumlah" min="1" value="3" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="alamat">Alamat Penjemputan (Surabaya)</label>
+                            <textarea id="alamat" rows="3" placeholder="Contoh: Jl. Gayung Kebonsari No. 12, Ketintang, Surabaya" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary-hero" style="width: 100%; border: none; cursor: pointer;">
+                            Kirim Order ke WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+                <div class="booking-info" id="kontak">
+                    <div>
+                        <h4 style="font-size: 1.4rem; font-weight: 800; color: white; margin-bottom: 20px;">Outlet & Lokasi</h4>
+
+                        <div class="info-item">
+                            <h5>Alamat Outlet</h5>
+                            <p>Jl. Ahmad Yani No.88, Ketintang, Kec. Gayungan, Surabaya, Jawa Timur 60231</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h5>Jam Operasional</h5>
+                            <p>Senin – Sabtu: 09:00 – 17:00 WIB<br><small style="color: var(--text-muted);">*Hari Minggu & Tanggal Merah Libur</small></p>
+                        </div>
+
+                        <div class="info-item">
+                            <h5>Contact Person</h5>
+                            <p>WhatsApp: <a href="https://wa.me/6285196900094" target="_blank">0851-9690-0094</a></p>
+                            <p>Instagram: <a href="https://www.instagram.com/stepformcare/reposts/" target="_blank">@stepformcare</a></p>
+                        </div>
+
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.291772670732!2d112.7291185!3d-7.3211116!2m3!1f0!1f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb6d10e53a29%3A0xb33df6ad6d628eb4!2sJl.%20Ahmad%20Yani%20No.88%2C%20Gayungan%2C%20Kec.%20Gayungan%2C%20Surabaya%2C%20Jawa%20Timur%2060231!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION OUR TEAM (DIPINDAHKAN KE PALING BAWAH KETIKA DIPANGGIL) -->
+    <section class="section-padding team-section" id="team">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <h3 style="font-size: 2.2rem; font-weight: 800; color: white; margin-bottom: 8px;">Our Team</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Tim profesional di balik kualitas dan pelayanan terbaik StepForm.</p>
+            </div>
+
+            <div class="team-grid">
+                
+                <!-- 1. Ketua -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="./hanasta.jpg" alt="Hanasta Tahta Maiyatullah" class="team-img" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Hanasta Tahta Maiyatullah</h4>
+                        <span class="team-role">Ketua</span>
+                    </div>
+                </div>
+
+                <!-- 2. Website Designer -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="./mikhael.jpg" alt="Mikhael Gerard Sinulingga" class="team-img" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Mikhael Gerard Sinulingga</h4>
+                        <span class="team-role">Website Designer</span>
+                    </div>
+                </div>
+
+                <!-- 3. Content Writer -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="./nayaka.jpg" alt="Muhammad Nayaka Faadihilah" class="team-img" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Muhammad Nayaka Faadihilah</h4>
+                        <span class="team-role">Content Writer</span>
+                    </div>
+                </div>
+
+                <!-- 4. Marketing Analyst -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="./salman.jpg" alt="Salman Aminullah" class="team-img" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Salman Aminullah</h4>
+                        <span class="team-role">Marketing Analyst</span>
+                    </div>
+                </div>
+
+                <!-- 5. Dokumentasi -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="./emil.jpg" alt="Emil Muhamad Sultan Zahran" class="team-img" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h4 class="team-name">Emil Muhamad Sultan Zahran</h4>
+                        <span class="team-role">Dokumentasi</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="brand-text">
+                <h3 style="font-size: 1.4rem; font-weight: 800; color: white;">StepForm</h3>
+                <p style="color: var(--cyan-accent); font-size: 0.72rem; letter-spacing: 2px;">CLEAN YOUR STEP</p>
+            </div>
+
+            <p style="font-size: 0.88rem; color: var(--text-muted);">Spesialis Perawatan Sepatu, Topi & Tas Premium di Surabaya</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 StepForm (Clean Your Step). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT LOGIKA -->
+    <script>
+        // TOGGLE NAV MOBILE
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
+
+        // SCRIPT WHATSAPP ORDER GENERATOR
+        document.getElementById('waBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const waNum = document.getElementById('waNum').value;
+            const email = document.getElementById('email').value;
+            const layanan = document.getElementById('layanan').value;
+            const jumlah = document.getElementById('jumlah').value;
+            const alamat = document.getElementById('alamat').value;
+            const phoneAdmin = "6285196900094";
+
+            const message = `Halo Admin StepForm, saya mau pesan jasa antar-jemput perawatan sepatu:%0A%0A` +
+                            `*Nama Lengkap:* ${encodeURIComponent(nama)}%0A` +
+                            `*No. WhatsApp:* ${encodeURIComponent(waNum)}%0A` +
+                            `*Email:* ${encodeURIComponent(email)}%0A` +
+                            `*Layanan:* ${encodeURIComponent(layanan)}%0A` +
+                            `*Jumlah:* ${encodeURIComponent(jumlah)} Unit/Pasang%0A` +
+                            `*Alamat Penjemputan:* ${encodeURIComponent(alamat)}%0A%0A` +
+                            `Mohon konfirmasinya untuk jadwal penjemputan. Terima kasih!`;
+
+            window.open(`https://wa.me/${phoneAdmin}?text=${message}`, '_blank');
+        });
+
+        // SCRIPT INTERAKSI ACCORDION FAQ
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
